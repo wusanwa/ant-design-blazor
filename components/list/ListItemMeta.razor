@@ -1,0 +1,31 @@
+﻿@namespace AntDesign
+@inherits AntDomComponentBase
+
+<div class="@ClassMapper.Class" style="@Style">
+
+    @if (Avatar.Value!=null)
+    {
+        <div class="ant-list-item-meta-avatar">
+            @if (Avatar.IsT0 && Avatar.AsT0 != "")
+            {
+                <Avatar Src="@Avatar.AsT0"></Avatar>
+            }
+            else
+            {
+                @Avatar.AsT1
+            }
+         </div>
+    }
+
+    <div class="ant-list-item-meta-content">
+        <div>
+            <h4 class="ant-list-item-meta-title">
+                @Title
+            </h4>
+        </div>
+        <div class="ant-list-item-meta-description">
+            @Description
+        </div>
+    </div>
+</div>
+
